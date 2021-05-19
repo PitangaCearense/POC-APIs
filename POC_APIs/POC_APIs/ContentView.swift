@@ -6,11 +6,34 @@
 //
 
 import SwiftUI
+import Nuke
+import FetchImage
+import AVKit
+
 
 struct ContentView: View {
+    
+    @StateObject private var model = Model(url: .pixabayVideo, token: .pixabay)
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(model.data, id:\.self) {
+            if let uiImage = UIImage(data: $0) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: 50, height: 50)
+            } else if let player = AVPlayer(url: URL(string: String(decoding: $0, as: UTF8.self))!) {
+                VideoPlayer(player: player)
+                    .frame(width: 400, height: 300)
+                    .onAppear() {
+                        player.play()
+                    }
+            } else {
+                ProgressView()
+            }
+        }
+        .onAppear {
+            model.getImageUrl()
+        }
     }
 }
 

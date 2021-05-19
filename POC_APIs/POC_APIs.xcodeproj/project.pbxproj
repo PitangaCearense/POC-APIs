@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D149101E2653E160008C52D9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D149101D2653E160008C52D9 /* Model.swift */; };
+		D14910202653E1C5008C52D9 /* ApiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D149101F2653E1C5008C52D9 /* ApiUrl.swift */; };
+		D14910222653E613008C52D9 /* PexelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14910212653E613008C52D9 /* PexelsModel.swift */; };
+		D14910252653F36B008C52D9 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = D14910242653F36B008C52D9 /* Nuke */; };
+		D14910282653F6C6008C52D9 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = D14910272653F6C6008C52D9 /* FetchImage */; };
 		D1BF30C32652B6B70037223C /* POC_APIsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF30C22652B6B70037223C /* POC_APIsApp.swift */; };
 		D1BF30C52652B6B70037223C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF30C42652B6B70037223C /* ContentView.swift */; };
 		D1BF30C72652B6B80037223C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BF30C62652B6B80037223C /* Assets.xcassets */; };
@@ -34,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D149101D2653E160008C52D9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D149101F2653E1C5008C52D9 /* ApiUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrl.swift; sourceTree = "<group>"; };
+		D14910212653E613008C52D9 /* PexelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsModel.swift; sourceTree = "<group>"; };
 		D1BF30BF2652B6B70037223C /* POC_APIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POC_APIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BF30C22652B6B70037223C /* POC_APIsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POC_APIsApp.swift; sourceTree = "<group>"; };
 		D1BF30C42652B6B70037223C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D14910282653F6C6008C52D9 /* FetchImage in Frameworks */,
 				D1BF30EF2652B9450037223C /* Alamofire in Frameworks */,
+				D14910252653F36B008C52D9 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,9 @@
 			children = (
 				D1BF30C22652B6B70037223C /* POC_APIsApp.swift */,
 				D1BF30C42652B6B70037223C /* ContentView.swift */,
+				D149101D2653E160008C52D9 /* Model.swift */,
+				D14910212653E613008C52D9 /* PexelsModel.swift */,
+				D149101F2653E1C5008C52D9 /* ApiUrl.swift */,
 				D1BF30C62652B6B80037223C /* Assets.xcassets */,
 				D1BF30CB2652B6B80037223C /* Info.plist */,
 				D1BF30C82652B6B80037223C /* Preview Content */,
@@ -150,6 +163,8 @@
 			name = POC_APIs;
 			packageProductDependencies = (
 				D1BF30EE2652B9450037223C /* Alamofire */,
+				D14910242653F36B008C52D9 /* Nuke */,
+				D14910272653F6C6008C52D9 /* FetchImage */,
 			);
 			productName = POC_APIs;
 			productReference = D1BF30BF2652B6B70037223C /* POC_APIs.app */;
@@ -224,6 +239,8 @@
 			mainGroup = D1BF30B62652B6B70037223C;
 			packageReferences = (
 				D1BF30ED2652B9450037223C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D14910232653F36B008C52D9 /* XCRemoteSwiftPackageReference "Nuke" */,
+				D14910262653F6C6008C52D9 /* XCRemoteSwiftPackageReference "FetchImage" */,
 			);
 			productRefGroup = D1BF30C02652B6B70037223C /* Products */;
 			projectDirPath = "";
@@ -267,6 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D14910222653E613008C52D9 /* PexelsModel.swift in Sources */,
+				D14910202653E1C5008C52D9 /* ApiUrl.swift in Sources */,
+				D149101E2653E160008C52D9 /* Model.swift in Sources */,
 				D1BF30C52652B6B70037223C /* ContentView.swift in Sources */,
 				D1BF30C32652B6B70037223C /* POC_APIsApp.swift in Sources */,
 			);
@@ -590,6 +610,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D14910232653F36B008C52D9 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.6.0;
+			};
+		};
+		D14910262653F6C6008C52D9 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/FetchImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 		D1BF30ED2652B9450037223C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -601,6 +637,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D14910242653F36B008C52D9 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D14910232653F36B008C52D9 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		D14910272653F6C6008C52D9 /* FetchImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D14910262653F6C6008C52D9 /* XCRemoteSwiftPackageReference "FetchImage" */;
+			productName = FetchImage;
+		};
 		D1BF30EE2652B9450037223C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D1BF30ED2652B9450037223C /* XCRemoteSwiftPackageReference "Alamofire" */;
