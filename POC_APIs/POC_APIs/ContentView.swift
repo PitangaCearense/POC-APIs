@@ -13,7 +13,7 @@ import AVKit
 
 struct ContentView: View {
     
-    @StateObject private var model = Model(url: .pixabayVideo, token: .pixabay)
+    @StateObject private var model = Model(url: .poetrydb, token: .rijksmuseum)
     
     var body: some View {
         List(model.data, id:\.self) {
@@ -21,13 +21,19 @@ struct ContentView: View {
                 Image(uiImage: uiImage)
                     .resizable()
                     .frame(width: 50, height: 50)
-            } else if let player = AVPlayer(url: URL(string: String(decoding: $0, as: UTF8.self))!) {
+            } else if  model.url != .poetrydb ,
+                       let player = AVPlayer(url: URL(string: String(decoding: $0, as: UTF8.self))!) {
                 VideoPlayer(player: player)
                     .frame(width: 400, height: 300)
                     .onAppear() {
                         player.play()
                     }
-            } else {
+            } else if model.url == .poetrydb {
+                Text("\(String(decoding: $0, as: UTF8.self))")
+                Spacer()
+            }
+                
+            else {
                 ProgressView()
             }
         }

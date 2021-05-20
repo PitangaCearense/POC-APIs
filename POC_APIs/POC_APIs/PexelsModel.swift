@@ -11,6 +11,8 @@ struct PexelsModel: Codable{
     let photos: [Photos]?
     let videos: [Videos]?
     let hits: [Hit]?
+    let artObjects: [ArtObject]?
+    let lines: [String]?
 }
 
 struct Photos: Codable {
@@ -20,6 +22,10 @@ struct Photos: Codable {
 struct Videos: Codable {
     let video_files: [VideosFiles]?
     let medium: Medium?
+}
+
+struct ArtObject: Codable {
+    let webImage: Picture
 }
 
 struct Medium: Codable {
@@ -37,4 +43,8 @@ struct SRC: Codable {
 struct Hit: Codable {
     let largeImageURL: String?
     let videos: Videos?
+}
+
+struct Picture: Codable {
+    let url: String
 }
